@@ -991,17 +991,27 @@ body {
     .comparison-divider {
         margin: 20px auto;
     }
+
+    /* FIX: Logo and announcement stacked on tablet */
+    .logo-announcement-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .jamb-logo-side {
+        justify-content: center;
+    }
+
+    .whatsapp-announcement-side {
+        text-align: center;
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 768px) {
     .container {
-        max-width: 100vw !important;
-        width:100% !important;
-        padding-left: 10px !important
-        padding-right:10px !important;
-        margin: 0 !important;
-        box-sizing: border-box;
-       
+        padding: 40px 15px;
     }
 
     .hero-title {
@@ -1018,18 +1028,6 @@ body {
     .pricing-cards {
         grid-template-columns: 1fr;
     }
-
-  .section,
-  .pricing-card,
-  .benefit-card,
-  .feature-card,
-  .comparison-box {
-    width: 100% !important;
-    max-width: 100vw !important;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-    box-sizing: border-box;
-  }
 
     .footer-content {
         grid-template-columns: 1fr;
@@ -1049,5 +1047,99 @@ body {
     .cta-button {
         padding: 14px 28px;
         font-size: 1rem;
+    }
+
+    /* FIX: Logo and announcement stacked on mobile */
+    .logo-announcement-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .jamb-logo-placeholder {
+        padding: 20px;
+    }
+
+    .logo-circle {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 15px;
+    }
+
+    .logo-circle i {
+        font-size: 3rem;
+    }
+
+    .whatsapp-announcement-side {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .announcement-icon {
+        margin: 0 auto;
+    }
+
+    .info-cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+/* Extra small screens - phones */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.6rem !important;
+        line-height: 1.3;
+    }
+
+    .section-title {
+        font-size: 1.8rem !important;
+    }
+
+    .cta-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .logo-announcement-row {
+        padding: 15px !important;
+    }
+
+    .logo-circle {
+        width: 100px !important;
+        height: 100px !important;
+    }
+
+    .logo-circle i {
+        font-size: 2.5rem !important;
+    }
+
+    .whatsapp-announcement-side {
+        padding: 20px !important;
+    }
+
+    .announcement-text h3 {
+        font-size: 1.1rem !important;
+    }
+
+    .announcement-text p {
+        font-size: 0.9rem !important;
+    }
+
+    .info-card {
+        padding: 15px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .countdown-number {
+        font-size: 3rem !important;
+    }
+
+    .registration-badge {
+        font-size: 0.9rem;
+        padding: 10px 20px;
     }
 }
